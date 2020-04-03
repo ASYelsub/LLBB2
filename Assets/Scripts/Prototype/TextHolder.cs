@@ -4,17 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 public class TextHolder : MonoBehaviour
 {
-    [SerializeField]
-    private Text dialogueText;
-    [SerializeField]
-    private string dialogue;
-    void Start()
+    public string dialogue;
+    public GameManager gameManager;
+    
+    
+    private void OnTriggerEnter(Collider other)
     {
-        //dialogueText.text = dialogue;
-    }
-
-    void DisplayText()
-    {
-        dialogueText.text = dialogue;
+        print(other.name );
+        gameManager.DisplayDialogue(dialogue);
     }
 }

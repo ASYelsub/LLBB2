@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    public static GameManager gameManager;
+    public GameManager gameManager;
     private Transform playerTransform;
     private Vector3 playerPosition;
     public float playerSpeed;
@@ -40,10 +40,5 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        print(other.GetType());
-        //we are trying to set the string in the box of the UI depending on the collision
-//        gameManager.DisplayDialogue(1);
-    }
+    
 }

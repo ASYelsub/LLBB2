@@ -163,9 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c170512139b04544bd625cf3a9eacbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  places:
-  - {fileID: 1001592732}
-  - {fileID: 116875668}
+  placesAffected:
+  - {fileID: 1001592731}
+  - {fileID: 116875666}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -174,6 +174,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  textPlaces:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  dialogueText: {fileID: 683797299}
 --- !u!1 &57626610
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +299,7 @@ GameObject:
   - component: {fileID: 116875668}
   - component: {fileID: 116875671}
   m_Layer: 0
-  m_Name: Cube- Lingua Lounge
+  m_Name: Cube - Lingua Lounge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,8 +392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 056a32516a21e48f8a3a9b6b81ca7dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 683797299}
-  dialogue: '"Carmeline is here, in theory."'
+  dialogue: '"Vesuvius sneezed on a man in this room."'
+  gameManager: {fileID: 51492992}
 --- !u!1 &217699309
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +748,7 @@ GameObject:
   - component: {fileID: 1001592732}
   - component: {fileID: 1001592736}
   m_Layer: 0
-  m_Name: Cube- Science Lab
+  m_Name: Cube - Science Lab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -829,8 +841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 056a32516a21e48f8a3a9b6b81ca7dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 683797299}
-  dialogue: '"Vesuvius sneezed on a man in this room."'
+  dialogue: '"Carmeline is here, in theory."'
+  gameManager: {fileID: 51492992}
 --- !u!1 &1279570364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,6 +1319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea17f5c6d7364579aab07d924fbcaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 51492992}
   playerSpeed: 0.05
 --- !u!54 &1849599598
 Rigidbody:
