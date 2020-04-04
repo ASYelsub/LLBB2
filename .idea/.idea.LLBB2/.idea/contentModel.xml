@@ -8,6 +8,7 @@
           <e p="CameraCombat.cs" t="Include" />
           <e p="CameraOpen.cs" t="Include" />
           <e p="Prototype" t="Include">
+            <e p="CharacterManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="TextHolder.cs" t="Include" />
