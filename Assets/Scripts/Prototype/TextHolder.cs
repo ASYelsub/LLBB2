@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class TextHolder : MonoBehaviour
 {
-    private string[] dialogue = new string[20];
+    [SerializeField] private string[] dialogue = new string[20];
     public GameManager gameManager;
     public bool isColliding;
     [SerializeField] private MeshRenderer notifCube;
