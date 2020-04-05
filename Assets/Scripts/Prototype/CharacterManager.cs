@@ -7,7 +7,11 @@ public class CharacterManager : MonoBehaviour
 {
     [SerializeField]
     private Transform[] KidTransform = new Transform[8]; //holds the transform of the kid
+    [SerializeField]
     private Vector3[] TeacherSpot = new Vector3[2];
+    [SerializeField]
+    private GameObject[] Locations = new GameObject[20];
+    
     void Start()
     {
         

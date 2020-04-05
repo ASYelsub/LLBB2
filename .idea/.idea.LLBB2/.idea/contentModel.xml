@@ -5,8 +5,6 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="CameraCombat.cs" t="Include" />
-          <e p="CameraOpen.cs" t="Include" />
           <e p="Prototype" t="Include">
             <e p="CharacterManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
