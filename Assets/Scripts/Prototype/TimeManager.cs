@@ -5,22 +5,26 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
+    public static int dayNumber; //starts the week of August 26th, never resets, potentially unused until later.
+    public static int weekNumber;
+    
     public static int timeOfDay; //1 = before class, //1 = during class, //2 = after class, //3 = evening
-    //public static int dayNumber; //starts the week of August 26th, never resets, potentially unused until later.
     public static int dayPerMonthCount; //every time monthCount gets to maximum number of days in given month, the string associated with the month name changes and monthCount sets to 1
     public static string[] monthName = new string[13]; //name of the month displayed
+    public LocationManager locationManager;
     private int monthToken; //goes in monthCount
     private string[] weekDayNames = new string[7];
     private int weekDayToken; //goes into weekdaynames
     private string[] dayTimeNames = new string[4];
 
-    [SerializeField] private Text DateDisplay;
+    [SerializeField] private Text dateDisplay;
     [SerializeField] private Text weekDayDisplay;
     [SerializeField] private Text timeOfDayDisplay;
     
     
-    void Start() //these setters will be erased and probably put on the gameManager.
+    void Awake() //these setters will be erased and probably put on the gameManager.
     {
+
         monthName[0] = "January";
         monthName[1] = "Februray";
         monthName[2] = "March";
@@ -50,15 +54,19 @@ public class TimeManager : MonoBehaviour
         monthToken = 7; //starts in August
         weekDayToken = 0; //starts on a monday
         timeOfDay = 0; //starts in the morning
+        dayNumber = 0;
+        weekNumber = 0;
         
         dayPerMonthCount = 26; //starts on the 26th
-        DateDisplay.text = monthName[monthToken] +" / "+ dayPerMonthCount.ToString();
+        dateDisplay.text = monthName[monthToken] +" / "+ dayPerMonthCount.ToString();
         weekDayDisplay.text = "Day: " + weekDayNames[weekDayToken];
         timeOfDayDisplay.text = "Time of Day: " + dayTimeNames[timeOfDay];
     }
+    
 
     public void AddTimeOfDay()
-    {
+    {        
+        locationManager.AssignSpot(dayNumber, weekNumber);
         if (timeOfDay >= 3)
         {
             timeOfDay = 0;
@@ -73,15 +81,18 @@ public class TimeManager : MonoBehaviour
     }
     public void AddDay() //goes to next day, sets timeOfDay to 1, adds to dayNumber and adds or resets monthCount
     {
+        dayNumber += 1;
+        
         if (weekDayToken >= 6)
         {
             weekDayToken = 0;
+            weekNumber++;
         }
         else
         {
             weekDayToken++;
         }
-        //dayNumber += 1;
+        locationManager.AssignSpot(dayNumber, weekNumber);
         if (monthToken == 0 && dayPerMonthCount >= 31) //we want it to check dayPerMonthCount before changing it.
         {
             dayPerMonthCount = 1;
@@ -147,7 +158,8 @@ public class TimeManager : MonoBehaviour
             dayPerMonthCount++;
         }
         
-        DateDisplay.text = monthName[monthToken] +" / "+ dayPerMonthCount.ToString();
+        dateDisplay.text = monthName[monthToken] +" / "+ dayPerMonthCount.ToString();
         weekDayDisplay.text = "Day: " + weekDayNames[weekDayToken];
     }
+    
 }

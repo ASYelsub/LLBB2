@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+//Although this script is called TextHolder, it does not hold text, it displays text according to what character is currently
+//at the location this script is on.
+
 public class TextHolder : MonoBehaviour
 {
     [SerializeField] private string[] dialogue = new string[20];
