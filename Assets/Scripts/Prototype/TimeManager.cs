@@ -65,8 +65,7 @@ public class TimeManager : MonoBehaviour
     
 
     public void AddTimeOfDay()
-    {        
-        locationManager.AssignSpot(dayNumber, weekNumber);
+    {
         if (timeOfDay >= 3)
         {
             timeOfDay = 0;
@@ -78,6 +77,16 @@ public class TimeManager : MonoBehaviour
         }
 
         timeOfDayDisplay.text = "Time of Day: " + dayTimeNames[timeOfDay];
+        locationManager.AssignSpot(dayNumber, weekNumber, timeOfDay);
+    }
+
+    public void AddWeek()
+    {
+        for (int i = 0; i < 7; i++)
+        {
+            AddDay();
+        }
+
     }
     public void AddDay() //goes to next day, sets timeOfDay to 1, adds to dayNumber and adds or resets monthCount
     {
@@ -92,7 +101,7 @@ public class TimeManager : MonoBehaviour
         {
             weekDayToken++;
         }
-        locationManager.AssignSpot(dayNumber, weekNumber);
+        locationManager.AssignSpot(dayNumber, weekNumber, timeOfDay);
         if (monthToken == 0 && dayPerMonthCount >= 31) //we want it to check dayPerMonthCount before changing it.
         {
             dayPerMonthCount = 1;

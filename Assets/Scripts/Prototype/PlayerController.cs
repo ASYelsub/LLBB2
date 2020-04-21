@@ -38,6 +38,6 @@ public class PlayerController : MonoBehaviour
             playerPosition.z -= playerSpeed;
         }
     }
-
+    
     
 }
