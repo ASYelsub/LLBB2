@@ -8,9 +8,13 @@ using UnityEngine.UI;
 
 public class TextHolder : MonoBehaviour
 {
-    [SerializeField] private string[] dialogue = new string[20];
+    [SerializeField]
+    private string[] dialogue = new string[20];
     public GameManager gameManager;
     [SerializeField] private MeshRenderer notifCube;
+
+    [SerializeField]
+    private Button[] charSelectDialogueButton = new Button[5];
 
     private void Start()
     {
@@ -35,5 +39,10 @@ public class TextHolder : MonoBehaviour
     {
         notifCube.enabled = false;
         gameManager.TurnOffDialogue();
+    }
+
+    public void LinguaLoungeButtons(string charName1, string charName2, string charName3, string charName4)
+    {
+        
     }
 }

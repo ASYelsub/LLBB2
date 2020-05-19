@@ -28,8 +28,6 @@ public class LocationManager : MonoBehaviour
     [SerializeField]
     private Transform[] charTransform = new Transform[8]; //holds the transform of the kid
     [SerializeField]
-    private Vector3[] teacherSpot = new Vector3[2];
-    [SerializeField]
     private GameObject[] locations = new GameObject[25];
 
     private Vector3[] locationPosition = new Vector3[25];
@@ -43,7 +41,7 @@ public class LocationManager : MonoBehaviour
         }
         AssignSpot(TimeManager.dayNumber, TimeManager.weekNumber, TimeManager.timeOfDay);
     }
-
+    
     public void AssignSpot(int dayNum, int weekNum, int timeOfDay) //sets kid positions according to the story
     {
         switch (timeOfDay)
