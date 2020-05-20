@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 [System.Serializable]
@@ -10,17 +11,51 @@ public static class Year
     public static Day currentDay;
     public static Time currentTime;
 
-    public static Vector3[] locations;
-    public enum location
+    public enum Time { Morning, Class, Afternoon, Evening };
+    public enum Day { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
+    public enum WhichMonth { January = 1, February, March, April, May, June, July, August, September, October, November, December };
+    public enum Class { English, Math, Language, Science, };
+
+    public class Schedule
     {
-        LinguaLounge = 0, ScienceLab = 1, TeachersOffice = 2,
-        ComputationRoom = 3, WeightRoom = 4, FootballField = 5,
-        DarkRoom = 6, TheShed = 7, CostumeCloset = 8,
-        PublicTheater = 9, WritingDen = 10, BackField = 11,
-        RadioTower = 12, River = 13, SecretGarden = 14,
-        BoxingRing = 15, PostOffice = 16, Diner = 17,
-        ExtraTerrestrial = 18, Dormitory = 19, WateredMelon = 20,
-        TheQuad = 21, TheTrainer = 22, Chapel = 23, ChemicalBasement = 24
+        public DayInSchedule[] daysInSchedule; // should be 7
+        public UnityEngine.Vector3 GetCurrentPosition()
+        {
+            return LocationManager.locationPosition[GetTimeSlot().myLocation];
+        }
+
+        public TimeSlot GetTimeSlot()
+        {
+            return daysInSchedule[(int)currentDay].timeSlots[(int)currentTime];
+        }
+    }
+
+    public class TimeSlot
+    {
+        public Time myTime;
+        public int myLocation;
+        public Class myClass;
+
+    }
+
+    [System.Serializable]
+    public class DayInSchedule
+    {
+        public Day myDay;
+        public TimeSlot[] timeSlots;
+    }
+
+    [System.Serializable]
+    public class Month
+    {
+        public int currentWeek;
+        public WhichMonth month;
+        public int dayInMonth; //ranging from 1-31
+
+        public string GetCurrentMonth()
+        {
+            return month.ToString();
+        }
     }
 
     public static string GetDateAsString()
@@ -34,41 +69,130 @@ public static class Year
         return int.Parse(s);
     }
 
-  
-
-    public class Schedule
+    public static string GetShortDate()
     {
-        public DayInSchedule[] daysInSchedule; // should be 7
+        return currentMonth + "/" + GetDayInMonth();
     }
 
-    public class TimeSlot
+    public static int GetDayInMonth()
     {
-        public Time myTime;
-        public int myLocation, myPos; // ints are used to find the location and locationPos
+        return months[currentMonth].dayInMonth;
     }
 
-    [System.Serializable]
-    public class DayInSchedule
+
+    public static void SetDayInMonth(int i)
     {
-        public Day myDay;
-        public TimeSlot[] timeSlots;
+        months[currentMonth].currentWeek = i;
     }
 
-    public enum Time { Morning, Class, Afternoon, Evening };
-    public enum Day { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
-    public enum WhichMonth {  January = 1, February, March, April, May, June, July, August, September, October, November, December};
-
-    [System.Serializable]
-    public class Month
+    public static int GetWeekInMonth()
     {
-        public int numOfWeeks; // how many weeks are in this month:
-        public WhichMonth month;
-        public int dayInMonth; //ranging from 1-31
+        return months[currentMonth].currentWeek;
+    }
+    
+    static void NextWeek()
+    {
+        months[currentMonth].currentWeek++;
+        currentDay = 0;
+    }
 
-        public string GetCurrentMonth()
+    static void NextDay()
+    {
+        months[currentMonth].dayInMonth++;
+        currentTime = 0;
+    }
+
+    static void NextMonth()
+    {
+        SetDayInMonth(1);
+        currentMonth++;
+    }
+
+    public static void GoToNextWeek() // might want to change how this works tbh
+    {
+        if (GetWeekInMonth() >= 4)
         {
-            return month.ToString();
+            SetWeekInMonth(0);
         }
+        else
+        {
+            NextWeek();
+        }
+    }
+
+
+    public static void GoToNextDay() //goes to next day, sets timeOfDay to 1, adds to dayNumber and adds or resets monthCount
+    {
+        if (GetDayInMonth() >= 6)
+        {
+            NextWeek();
+        }
+        else
+        {
+            NextDay();
+        }
+
+
+        if (currentMonth == 0 && GetDayInMonth() >= 31) //we want it to check dayPerMonthCount before changing it.
+        {
+            NextMonth();
+        }
+        else if (currentMonth == 1)
+        {
+            if(currentYear % 4 == 0 && GetDayInMonth() >= 29)
+            {
+                NextMonth();
+            }
+            else if (currentYear % 4 != 0 && GetDayInMonth() >= 28)
+            {
+                NextMonth();
+            }
+        }
+        else if (currentMonth == 2 && GetDayInMonth() >= 31)
+        {
+            NextMonth();
+        }
+        else if (currentMonth == 3 && GetDayInMonth() >= 30)
+        {
+            NextMonth();
+        }
+        else if (currentMonth == 4 && GetDayInMonth() >= 31)
+        {
+            NextMonth();
+        }
+        else if (currentMonth == 5 && GetDayInMonth() >= 30)
+        {
+            NextMonth();
+        }
+        else if (currentMonth == 6 && GetDayInMonth() >= 31)
+        {
+            NextMonth();
+        }
+        else if (currentMonth == 7 && GetDayInMonth() >= 31)
+        {
+            NextMonth();
+        }
+        else if (currentMonth == 8 && GetDayInMonth() >= 30)
+        {
+            NextMonth();
+        }
+        else if (currentMonth == 9 && GetDayInMonth() >= 31)
+        {
+            NextMonth();
+        }
+        else if (currentMonth == 10 && GetDayInMonth() >= 30)
+        {
+            NextMonth();
+        }
+        else if (currentMonth == 11 && GetDayInMonth() >= 31)
+        {
+            NextMonth();
+        }
+    }
+
+    public static void SetWeekInMonth(int i)
+    {
+        months[currentMonth].dayInMonth = i;
     }
    
 }

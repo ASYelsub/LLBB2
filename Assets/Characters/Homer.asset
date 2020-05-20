@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76746cdb54bd34e479db606a81b3827a, type: 3}
+  m_Name: Homer
+  m_EditorClassIdentifier: 
+  _name: 
+  whamitude: 0
+  popularity: 0
+  school: 0
+  spirit: 0
+  creepiness: 0
+  skinThickness: 0
+  independence: 0
+  empathy: 0
+  strut: 0
+  health: 0
+  stamina: 0
+  closenessToPlayer: 0
+  characterSprites: []
+  myLocation: 0
+  characterOBJ: {fileID: 0}

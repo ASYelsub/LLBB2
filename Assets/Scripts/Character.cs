@@ -17,21 +17,26 @@ public class Character : ScriptableObject
 
     public Year.Schedule schedule;
 
-    public Year.location myLocation;
-
     public Sprite[] characterSprites; //their portraits;
+
+    public LocationManager.location myLocation;
 
     public GameObject characterOBJ;
 
     public void ScheduleChanged() // anytime a schedule is changed characters should move to the correct spot based on the current time
     {
-        MovetoPos( Year.locations[schedule.daysInSchedule[(int)Year.currentDay].timeSlots[(int)Year.currentTime].myPos]);
-        // the above looks really ugly and complex for no reason :/ need to fix tomorrow
+        myLocation = (LocationManager.location)schedule.GetTimeSlot().myLocation;
+        MovetoPos(schedule.GetCurrentPosition());
     }
 
     public void MovetoPos(Vector3 pos)
     {
         characterOBJ.transform.position = pos;
+    }
+
+    public void SetGameObject(GameObject g) // to help make getting the gameobjects easier
+    {
+        characterOBJ = g;
     }
 
 }
