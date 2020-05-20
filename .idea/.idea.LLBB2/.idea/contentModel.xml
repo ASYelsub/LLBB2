@@ -5,6 +5,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="Character.cs" t="Include" />
           <e p="Prototype" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="LocationManager.cs" t="Include" />
@@ -12,6 +13,7 @@
             <e p="TextHolder.cs" t="Include" />
             <e p="TimeManager.cs" t="Include" />
           </e>
+          <e p="Year.cs" t="Include" />
         </e>
       </e>
       <e p="LLBB2.sln" t="IncludeFlat" />
