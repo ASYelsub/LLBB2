@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="Objects",menuName ="Characters",order = 0)]
+[CreateAssetMenu(fileName ="Objects",menuName ="Objects/Characters",order = 0)]
 public class Character : ScriptableObject
 {
 
@@ -15,28 +15,20 @@ public class Character : ScriptableObject
 
     public int closenessToPlayer;
 
-    public Year.Schedule schedule;
+    public Schedule schedule;
 
     public Sprite[] characterSprites; //their portraits;
 
     public LocationManager.location myLocation;
 
-    public GameObject characterOBJ;
-
-    public void ScheduleChanged() // anytime a schedule is changed characters should move to the correct spot based on the current time
+    public void ScheduleChanged(GameObject g) // anytime a schedule is changed characters should move to the correct spot based on the current time
     {
         myLocation = (LocationManager.location)schedule.GetTimeSlot().myLocation;
-        MovetoPos(schedule.GetCurrentPosition());
+        MovetoPos(g,schedule.GetCurrentPosition());
     }
 
-    public void MovetoPos(Vector3 pos)
+    public void MovetoPos(GameObject g,Vector3 pos)
     {
-        characterOBJ.transform.position = pos;
+        g.transform.position = pos;
     }
-
-    public void SetGameObject(GameObject g) // to help make getting the gameobjects easier
-    {
-        characterOBJ = g;
-    }
-
 }

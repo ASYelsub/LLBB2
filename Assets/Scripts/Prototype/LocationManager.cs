@@ -6,8 +6,7 @@ using UnityEngine;
 //and then send it to the TextHolder on that object.
 public class LocationManager : MonoBehaviour
 {    
-    [SerializeField]
-    private Transform[] charTransform = new Transform[7]; //holds the transform of the kid
+    public Transform[] charTransform = new Transform[7];
     public Character[] characters;
 
     public static Vector3[] locationPosition = new Vector3[25];
@@ -33,10 +32,6 @@ public class LocationManager : MonoBehaviour
             locationPosition[i] = locations[i].transform.position;
         }
 
-        for (int j = 0; j < charTransform.Length - 1;j++)
-        {
-            characters[j].SetGameObject(charTransform[j].gameObject);
-        }
 
         CharactersMove();
     }
@@ -45,10 +40,99 @@ public class LocationManager : MonoBehaviour
 
     public void CharactersMove() // called when the time changes
     {
-        foreach ( Character c in characters)
+
+        for (int j = 0; j < charTransform.Length - 1; j++)
         {
-            c.ScheduleChanged();
+            characters[j].ScheduleChanged(charTransform[j].gameObject);
         }
     }
+
+    /*
+     *  public void AssignSpot(int dayNum, int weekNum, int timeOfDay) //sets kid positions according to the story
+    {
+        switch (timeOfDay)
+        {
+        case 1:
+            charTransform[(int) character.Carnie].position = locationPosition[(int) location.LinguaLounge];
+            charTransform[(int) character.Vesuvius].position = locationPosition[(int) location.LinguaLounge];
+            charTransform[(int) character.Magus].position = locationPosition[(int) location.WritingDen];
+            charTransform[(int) character.Bobby].position = locationPosition[(int) location.WritingDen];
+            charTransform[(int) character.Urania].position = locationPosition[(int) location.ComputationRoom];
+            charTransform[(int) character.Elise].position = locationPosition[(int) location.ComputationRoom];
+            charTransform[(int) character.Carmeline].position = locationPosition[(int) location.ScienceLab];
+            charTransform[(int) character.Homer].position = locationPosition[(int) location.ScienceLab];
+            break;
+        case 3:
+            charTransform[(int) character.Carnie].position = locationPosition[(int) location.Dormitory];
+            charTransform[(int) character.Vesuvius].position = locationPosition[(int) location.Dormitory];
+            charTransform[(int) character.Magus].position = locationPosition[(int) location.Dormitory];
+            charTransform[(int) character.Bobby].position = locationPosition[(int) location.Dormitory];
+            charTransform[(int) character.Urania].position = locationPosition[(int) location.Dormitory];
+            charTransform[(int) character.Elise].position = locationPosition[(int) location.Dormitory];
+            charTransform[(int) character.Carmeline].position = locationPosition[(int) location.Dormitory];
+            charTransform[(int) character.Homer].position = locationPosition[(int) location.Dormitory];
+            break;
+        default:
+                switch (weekNum)
+                {
+                case 0 :
+                   charTransform[(int) character.Carnie].position = locationPosition[(int) location.TheQuad];
+                   charTransform[(int) character.Magus].position = locationPosition[(int) location.TheQuad];
+                   charTransform[(int) character.Vesuvius].position = locationPosition[(int) location.TheQuad];
+                   charTransform[(int) character.Carmeline].position = locationPosition[(int) location.PublicTheater];
+                   charTransform[(int) character.Elise].position = locationPosition[(int) location.DarkRoom];
+                   charTransform[(int) character.Homer].position = locationPosition[(int) location.SecretGarden];
+                   charTransform[(int) character.Urania].position = locationPosition[(int) location.RadioTower];
+                   charTransform[(int) character.Bobby].position = locationPosition[(int) location.TheQuad];
+                   break;
+                case 1 :
+                    charTransform[(int) character.Carnie].position = locationPosition[(int) location.LinguaLounge];
+                    charTransform[(int) character.Magus].position = locationPosition[(int) location.WeightRoom];
+                    charTransform[(int) character.Vesuvius].position = locationPosition[(int) location.LinguaLounge];
+                    charTransform[(int) character.Carmeline].position = locationPosition[(int) location.CostumeCloset];
+                    charTransform[(int) character.Elise].position = locationPosition[(int) location.PostOffice];
+                    charTransform[(int) character.Homer].position = locationPosition[(int) location.SecretGarden];
+                    charTransform[(int) character.Urania].position = locationPosition[(int) location.Diner];
+                    charTransform[(int) character.Bobby].position = locationPosition[(int) location.WeightRoom];
+                    break;
+                case 2 :
+                    charTransform[(int) character.Carnie].position = locationPosition[(int) location.WeightRoom];
+                    charTransform[(int) character.Magus].position = locationPosition[(int) location.TheTrainer];
+                    charTransform[(int) character.Vesuvius].position = locationPosition[(int) location.ExtraTerrestrial];
+                    charTransform[(int) character.Carmeline].position = locationPosition[(int) location.PublicTheater];
+                    charTransform[(int) character.Elise].position = locationPosition[(int) location.River];
+                    charTransform[(int) character.Homer].position = locationPosition[(int) location.PublicTheater];
+                    charTransform[(int) character.Urania].position = locationPosition[(int) location.River];
+                    charTransform[(int) character.Bobby].position = locationPosition[(int) location.FootballField];
+                    break;
+                case 3 :
+                    charTransform[(int) character.Carnie].position = locationPosition[(int) location.BoxingRing];
+                    charTransform[(int) character.Magus].position = locationPosition[(int) location.River];
+                    charTransform[(int) character.Vesuvius].position = locationPosition[(int) location.WateredMelon];
+                    charTransform[(int) character.Carmeline].position = locationPosition[(int) location.ScienceLab];
+                    charTransform[(int) character.Elise].position = locationPosition[(int) location.River];
+                    charTransform[(int) character.Homer].position = locationPosition[(int) location.River];
+                    charTransform[(int) character.Urania].position = locationPosition[(int) location.TeachersOffice];
+                    charTransform[(int) character.Bobby].position = locationPosition[(int) location.WeightRoom];
+                    break;
+                case 4 :
+                    break;
+                case 5 :
+                    break;
+                case 6 :
+                    break;
+                case 7 :
+                    break;
+                case 8 :
+                    break;
+                }
+            break;
+        }
+       
+        
+        
+    }
+
+     */
 
 }

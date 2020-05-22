@@ -24,6 +24,6 @@ MonoBehaviour:
   health: 3
   stamina: 2
   closenessToPlayer: 0
+  schedule: {fileID: 11400000, guid: 210d3367dffd6aa41b0d9370fffcaf34, type: 2}
   characterSprites: []
   myLocation: 0
-  characterOBJ: {fileID: 0}

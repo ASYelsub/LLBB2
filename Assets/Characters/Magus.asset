@@ -15,8 +15,7 @@ MonoBehaviour:
   _name: 
   whamitude: 0
   popularity: 0
-  school: 0
-  spirit: 0
+  schoolSpirit: 0
   creepiness: 0
   skinThickness: 0
   independence: 0
@@ -25,6 +24,6 @@ MonoBehaviour:
   health: 0
   stamina: 0
   closenessToPlayer: 0
+  schedule: {fileID: 11400000, guid: 7057844369b5c8d43be30f5a11c3bc96, type: 2}
   characterSprites: []
   myLocation: 0
-  characterOBJ: {fileID: 0}

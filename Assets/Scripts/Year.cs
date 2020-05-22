@@ -14,43 +14,7 @@ public static class Year
     public enum Time { Morning, Class, Afternoon, Evening };
     public enum Day { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
     public enum WhichMonth { January = 1, February, March, April, May, June, July, August, September, October, November, December };
-    public enum Class { English, Math, Language, Science, None };
-
-
-    [System.Serializable]
-    public class Schedule
-    {
-        public DayInSchedule[] daysInSchedule;
-
-        public UnityEngine.Vector3 GetCurrentPosition()
-        {
-            return LocationManager.locationPosition[GetTimeSlot().myLocation];
-        }
-
-        public TimeSlot GetTimeSlot()
-        {
-            return daysInSchedule[(int)currentDay].timeSlots[(int)currentTime];
-        }
-
-    }
-
-    [System.Serializable]
-    public class TimeSlot
-    {
-        public Time myTime;
-        public int myLocation;
-        public Class myClass;
-
-    }
-
-    [System.Serializable]
-    public class DayInSchedule
-    {
-        public Day myDay;
-        public TimeSlot[] timeSlots;
-    }
- 
-
+   
     public static string GetDateAsString()
     {
         return currentDay + ", " + currentMonth.ToString() + " " + dayInMonth + ", " + currentYear;
@@ -88,6 +52,7 @@ public static class Year
         }
         else
         {
+            currentTime = 0;
             currentDay++;
         }
 

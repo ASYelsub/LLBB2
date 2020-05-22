@@ -1,0 +1,411 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a18144a3dad0144da40ff223e5bd3d9, type: 3}
+  m_Name: Bobby
+  m_EditorClassIdentifier: 
+  weeks:
+  - daysInSchedule:
+    - myDay: 0
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 1
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 2
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 3
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 4
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 5
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 6
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+  - daysInSchedule:
+    - myDay: 0
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 1
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 2
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 3
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 4
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 5
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 6
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+  - daysInSchedule:
+    - myDay: 0
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 1
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 2
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 3
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 4
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 5
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 6
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+  - daysInSchedule:
+    - myDay: 0
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 1
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 2
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 3
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 4
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 5
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
+    - myDay: 6
+      timeSlots:
+      - myTime: 0
+        myLocation: 0
+        myClass: 4
+      - myTime: 1
+        myLocation: 0
+        myClass: 0
+      - myTime: 2
+        myLocation: 0
+        myClass: 4
+      - myTime: 3
+        myLocation: 19
+        myClass: 4
