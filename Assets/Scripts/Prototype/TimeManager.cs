@@ -15,12 +15,11 @@ public class TimeManager : MonoBehaviour
     
     void Awake() //these setters will be erased and probably put on the gameManager.
     {
-        
-        Year.currentMonth = 7; //starts in August
+        Year.currentMonth = (Year.WhichMonth)7; //starts in August
         Year.currentDay = 0; //starts on a monday
         Year.currentTime = 0; //starts in the morning
-        Year.SetDayInMonth(26);
-        Year.SetWeekInMonth(1);
+        Year.dayInMonth = 26;
+        Year.currentWeek = 1;
         
         dateDisplay.text = Year.GetShortDate(); // displays something like this "January / 25"
         weekDayDisplay.text = "Day: " + Year.currentDay.ToString();

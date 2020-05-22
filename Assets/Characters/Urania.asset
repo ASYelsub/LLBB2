@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76746cdb54bd34e479db606a81b3827a, type: 3}
+  m_Name: Urania
+  m_EditorClassIdentifier: 
+  _name: Urania
+  whamitude: 1
+  popularity: 1
+  schoolSpirit: 0
+  creepiness: 2
+  skinThickness: 2
+  independence: 4
+  empathy: 3
+  strut: 1
+  health: 3
+  stamina: 2
+  closenessToPlayer: 0
+  characterSprites: []
+  myLocation: 0
+  characterOBJ: {fileID: 0}

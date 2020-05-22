@@ -9,7 +9,7 @@ public class Character : ScriptableObject
     public string _name;
 
     //STATS
-    public int whamitude, popularity, school, spirit, 
+    public int whamitude, popularity, schoolSpirit, 
         creepiness, skinThickness, independence, 
         empathy, strut, health, stamina;
 
