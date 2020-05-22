@@ -335,6 +335,15 @@ MonoBehaviour:
   - {fileID: 1078316225}
   - {fileID: 1569807484}
   - {fileID: 1232758225}
+  characters:
+  - {fileID: 11400000, guid: 27da386a3e988384a827ca01abaf4778, type: 2}
+  - {fileID: 11400000, guid: 28be2abeab09dfe47b50c660a478d310, type: 2}
+  - {fileID: 11400000, guid: c31757c162ffc8845a94badc2565b251, type: 2}
+  - {fileID: 11400000, guid: 96313d3c4746d1244b7f4bac79ad3759, type: 2}
+  - {fileID: 11400000, guid: 9fcfac462ec7c5747a8031b4aeac7ccf, type: 2}
+  - {fileID: 11400000, guid: 2cf43e5e75b85dc4d8595e9394dad362, type: 2}
+  - {fileID: 11400000, guid: d5a8e55c0d8a8b148858cb371a556793, type: 2}
+  - {fileID: 11400000, guid: 6e29fd0be266d4246ac49eb8ba91ad75, type: 2}
   locations:
   - {fileID: 116875666}
   - {fileID: 1001592731}

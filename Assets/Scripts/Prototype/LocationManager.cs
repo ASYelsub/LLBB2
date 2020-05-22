@@ -41,7 +41,7 @@ public class LocationManager : MonoBehaviour
     public void CharactersMove() // called when the time changes
     {
 
-        for (int j = 0; j < charTransform.Length - 1; j++)
+        for (int j = 0; j < charTransform.Length; j++)
         {
             characters[j].ScheduleChanged(charTransform[j].gameObject);
         }
