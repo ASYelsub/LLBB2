@@ -17,13 +17,13 @@ MonoBehaviour:
     - myDay: 0
       timeSlots:
       - myTime: 0
-        myLocation: 0
+        myLocation: 21
         myClass: 4
       - myTime: 1
         myLocation: 0
-        myClass: 0
+        myClass: 2
       - myTime: 2
-        myLocation: 0
+        myLocation: 15
         myClass: 4
       - myTime: 3
         myLocation: 19
@@ -31,13 +31,13 @@ MonoBehaviour:
     - myDay: 1
       timeSlots:
       - myTime: 0
-        myLocation: 0
+        myLocation: 15
         myClass: 4
       - myTime: 1
         myLocation: 0
-        myClass: 0
+        myClass: 2
       - myTime: 2
-        myLocation: 0
+        myLocation: 15
         myClass: 4
       - myTime: 3
         myLocation: 19
@@ -45,13 +45,13 @@ MonoBehaviour:
     - myDay: 2
       timeSlots:
       - myTime: 0
-        myLocation: 0
+        myLocation: 21
         myClass: 4
       - myTime: 1
         myLocation: 0
-        myClass: 0
+        myClass: 2
       - myTime: 2
-        myLocation: 0
+        myLocation: 15
         myClass: 4
       - myTime: 3
         myLocation: 19
@@ -59,13 +59,13 @@ MonoBehaviour:
     - myDay: 3
       timeSlots:
       - myTime: 0
-        myLocation: 0
+        myLocation: 15
         myClass: 4
       - myTime: 1
         myLocation: 0
-        myClass: 0
+        myClass: 2
       - myTime: 2
-        myLocation: 0
+        myLocation: 15
         myClass: 4
       - myTime: 3
         myLocation: 19
@@ -73,13 +73,13 @@ MonoBehaviour:
     - myDay: 4
       timeSlots:
       - myTime: 0
-        myLocation: 0
+        myLocation: 23
         myClass: 4
       - myTime: 1
-        myLocation: 0
-        myClass: 0
+        myLocation: 23
+        myClass: 4
       - myTime: 2
-        myLocation: 0
+        myLocation: 15
         myClass: 4
       - myTime: 3
         myLocation: 19
@@ -87,13 +87,13 @@ MonoBehaviour:
     - myDay: 5
       timeSlots:
       - myTime: 0
-        myLocation: 0
+        myLocation: 19
         myClass: 4
       - myTime: 1
-        myLocation: 0
-        myClass: 0
+        myLocation: 19
+        myClass: 4
       - myTime: 2
-        myLocation: 0
+        myLocation: 19
         myClass: 4
       - myTime: 3
         myLocation: 19
@@ -101,310 +101,13 @@ MonoBehaviour:
     - myDay: 6
       timeSlots:
       - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
         myLocation: 19
         myClass: 4
-  - daysInSchedule:
-    - myDay: 0
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
       - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
         myLocation: 19
         myClass: 4
-    - myDay: 1
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
       - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
         myLocation: 19
-        myClass: 4
-    - myDay: 2
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 3
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 4
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 5
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 6
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-  - daysInSchedule:
-    - myDay: 0
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 1
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 2
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 3
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 4
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 5
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 6
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-  - daysInSchedule:
-    - myDay: 0
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 1
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 2
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 3
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 4
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 5
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
-        myClass: 4
-      - myTime: 3
-        myLocation: 19
-        myClass: 4
-    - myDay: 6
-      timeSlots:
-      - myTime: 0
-        myLocation: 0
-        myClass: 4
-      - myTime: 1
-        myLocation: 0
-        myClass: 0
-      - myTime: 2
-        myLocation: 0
         myClass: 4
       - myTime: 3
         myLocation: 19

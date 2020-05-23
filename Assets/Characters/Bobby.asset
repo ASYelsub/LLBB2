@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76746cdb54bd34e479db606a81b3827a, type: 3}
   m_Name: Bobby
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Bobby Bellows
   whamitude: 0
   popularity: 0
   schoolSpirit: 0
