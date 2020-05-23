@@ -59,7 +59,7 @@ public class Schedule : ScriptableObject
 
     public TimeSlot GetTimeSlot()
     {
-        return weeks[Year.currentWeek].daysInSchedule[(int)Year.currentDay].timeSlots[(int)Year.currentTime];
+        return weeks[Year.currentWeek-1].daysInSchedule[(int)Year.currentDay].timeSlots[(int)Year.currentTime];
     }
 
 
