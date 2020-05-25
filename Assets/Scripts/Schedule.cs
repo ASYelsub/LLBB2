@@ -6,14 +6,15 @@ using UnityEngine;
 public class Schedule : ScriptableObject
 {
     public enum Class { English, Math, Language, Science, None };
-    public WeekInSchedule[] weeks;
+    public List<WeekInSchedule> weeks;
 
     public Schedule()
     {
-        weeks = new WeekInSchedule[4];
-        for (int w = 0; w < weeks.Length; w++)
+        weeks = new List<WeekInSchedule>();
+        for (int w = 0; w < 5; w++)
         {
-            weeks[w] = new WeekInSchedule();
+            WeekInSchedule b = new WeekInSchedule();
+            weeks.Add(b);
         }
     }
 
