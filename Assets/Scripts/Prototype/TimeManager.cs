@@ -20,12 +20,16 @@ public class TimeManager : MonoBehaviour
         Year.currentTime = 0; //starts in the morning
         Year.dayInMonth = 26;
         Year.currentWeek = 1;
-        
+        UpdateText();
+      
+    }
+    
+    public void UpdateText()
+    {
         dateDisplay.text = Year.GetShortDate(); // displays something like this "January / 25"
         weekDayDisplay.text = "Day: " + Year.currentDay.ToString();
         timeOfDayDisplay.text = "Time of Day: " + Year.currentTime.ToString(); ;
     }
-    
 
     public void AddTimeOfDay()
     {
@@ -38,21 +42,20 @@ public class TimeManager : MonoBehaviour
             Year.currentTime++;
         }
 
-        timeOfDayDisplay.text = "Time of Day: " + Year.currentTime.ToString();
         locationManager.CharactersMove();
-
-        dateDisplay.text = Year.GetShortDate();
-        weekDayDisplay.text = "Day: " + Year.currentDay.ToString();
+        UpdateText();
     }
 
     public void AddWeek()
     {
-        Year.GoToNextWeek();
+        Year.XDaysLater(7);
+        UpdateText();
     }
 
     public void AddDay()
     {
         Year.GoToNextDay();
+        UpdateText();
     }
    
     

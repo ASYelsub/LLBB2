@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CapsuleCollider))]
 [RequireComponent(typeof(Rigidbody))]
@@ -22,43 +23,45 @@ public class PlayerController : MonoBehaviour
     {
         playerTransform.position = playerPosition;
 
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        if (!textManager.isActive)
         {
-            playerPosition.x += playerSpeed;
-        }
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {
-            playerPosition.z += playerSpeed;
-        }
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            playerPosition.x -= playerSpeed;
-        }
-        if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-            playerPosition.z -= playerSpeed;
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                playerPosition.x += playerSpeed;
+            }
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            {
+                playerPosition.z += playerSpeed;
+            }
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                playerPosition.x -= playerSpeed;
+            }
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+            {
+                playerPosition.z -= playerSpeed;
+            }
         }
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider collision)
     {
         GameObject g = collision.gameObject;
-        Debug.Log(g.name);
         if (g.GetComponent<InteractableBehaviour>() != null)
         {
             Character c = g.GetComponent<InteractableBehaviour>().myCharacter;
             textManager.DisplayLabel(c._name);
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && !textManager.isActive)
             {
                 textManager.label.SetActive(false);
-                if (c.weeklies[Year.currentWeek].seen)
+                if (c.weeklies[Year.currentWeek - 1].seen)
                 {
-                    textManager.EnableTextBox(c.weeklies[Year.currentWeek].shorterDialogue);
+                    textManager.EnableTextBox(c.weeklies[Year.currentWeek - 1].shorterDialogue);
                 }
                 else
                 {
-                    if (c.weeklies[Year.currentWeek].isSpecial)
+                    if (c.weeklies[Year.currentWeek - 1].isSpecial)
                     {
                         c.closenessToPlayer++;
                         if (c.closenessToPlayer > 5)
@@ -66,8 +69,8 @@ public class PlayerController : MonoBehaviour
                             c.closenessToPlayer = 5;
                         }
                     }
-                    textManager.EnableTextBox(c.weeklies[Year.currentWeek].dialogue);
-                    c.weeklies[Year.currentWeek].seen = true;
+                    textManager.EnableTextBox(c.weeklies[Year.currentWeek - 1].dialogue);
+                    c.weeklies[Year.currentWeek - 1].seen = true;
                 }
                
             }
@@ -75,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider collision)
     {
         textManager.label.SetActive(false);
     }

@@ -31,21 +31,34 @@ public static class Year
         return currentMonth.ToString() + "/" + dayInMonth;
     }
 
+    public static void XDaysLater(int numDays)
+    {
+        for (int i = 0; i < numDays; i++) 
+            GoToNextDay();
+    }
+
     public static void GoToNextWeek() // might want to change how this works tbh
     {
+        currentDay = 0;
         if (currentWeek >= 4)
         {
-            currentWeek = 0;
+            currentWeek = 1;
         }
         else
         {
             currentWeek++;
         }
     }
+    public static void GoToNextMonth()
+    {
+        dayInMonth = 1;
+        currentMonth++;
+    }
 
 
     public static void GoToNextDay() //goes to next day, sets timeOfDay to 1, adds to dayNumber and adds or resets monthCount
     {
+        dayInMonth++;
         if ((int)currentDay >= 6)
         {
             GoToNextWeek();
@@ -56,61 +69,69 @@ public static class Year
             currentDay++;
         }
 
+        if (dayInMonth >= 28)
+        {
+            CheckDayInMonth();
+        }
+    }
+
+    static void CheckDayInMonth() // checking if we're not going to a day in the month that doesn't exist
+    {
 
         if (currentMonth == 0 && dayInMonth >= 31) //we want it to check dayPerMonthCount before changing it.
         {
-            currentMonth++;
+            GoToNextMonth();
         }
         else if ((int)currentMonth == 1)
         {
-            if(currentYear % 4 == 0 && dayInMonth >= 29)
+            if (currentYear % 4 == 0 && dayInMonth >= 29)
             {
-                currentMonth++;
+                GoToNextMonth();
             }
             else if (currentYear % 4 != 0 && dayInMonth >= 28)
             {
-                currentMonth++;
+                GoToNextMonth();
             }
         }
         else if ((int)currentMonth == 2 && dayInMonth >= 31)
         {
-            currentMonth++;
+            GoToNextMonth();
         }
         else if ((int)currentMonth == 3 && dayInMonth >= 30)
         {
-            currentMonth++;
+            GoToNextMonth();
         }
         else if ((int)currentMonth == 4 && dayInMonth >= 31)
         {
-            currentMonth++;
+            GoToNextMonth();
         }
         else if ((int)currentMonth == 5 && dayInMonth >= 30)
         {
-            currentMonth++;
+            GoToNextMonth();
         }
         else if ((int)currentMonth == 6 && dayInMonth >= 31)
         {
-            currentMonth++;
+            GoToNextMonth();
         }
         else if ((int)currentMonth == 7 && dayInMonth >= 31)
         {
-            currentMonth++;
+            GoToNextMonth();
         }
         else if ((int)currentMonth == 8 && dayInMonth >= 30)
         {
-            currentMonth++;
+            GoToNextMonth();
         }
         else if ((int)currentMonth == 9 && dayInMonth >= 31)
         {
-            currentMonth++;
+            GoToNextMonth();
         }
         else if ((int)currentMonth == 10 && dayInMonth >= 30)
         {
-           currentMonth++;
+            GoToNextMonth();
         }
         else if ((int)currentMonth == 11 && dayInMonth >= 31)
         {
-            currentMonth++;
+            GoToNextMonth();
         }
     }
 

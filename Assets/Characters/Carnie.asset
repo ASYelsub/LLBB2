@@ -26,4 +26,19 @@ MonoBehaviour:
   closenessToPlayer: 0
   schedule: {fileID: 11400000, guid: 46a54d67d2dcfa049b89b2b083eea9f8, type: 2}
   characterSprites: []
-  myLocation: 15
+  myLocation: 21
+  weeklies:
+  - dialogue:
+    - Hi, my name's Carnie and I'm playing a board game
+    - Wanna play?
+    shorterDialogue:
+    - Something something board games...
+    isSpecial: 0
+    seen: 0
+  - dialogue:
+    - Testing the special dialogue!
+    - hmmm
+    shorterDialogue:
+    - something something special dialogue.
+    isSpecial: 1
+    seen: 0
