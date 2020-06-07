@@ -7,6 +7,41 @@
         <e p="Scripts" t="Include">
           <e p="Character.cs" t="Include" />
           <e p="InteractableBehaviour.cs" t="Include" />
+          <e p="LLBB1 Scirpts" t="Include">
+            <e p="AbbyScripts" t="Include">
+              <e p="ActiveCharMovement.cs" t="Include" />
+              <e p="CharacterSelector.cs" t="Include" />
+              <e p="CharacterStatStorage.cs" t="Include" />
+              <e p="InventoryManager.cs" t="Include" />
+              <e p="MoveButtonManager.cs" t="Include" />
+              <e p="NewCameraController.cs" t="Include" />
+              <e p="PickChar.cs" t="Include" />
+            </e>
+            <e p="CharacterData" t="Include">
+              <e p="Allies" t="Include">
+                <e p="BobbyData.cs" t="Include" />
+                <e p="CarmelineData.cs" t="Include" />
+                <e p="UraniaData.cs" t="Include" />
+                <e p="VesuviusData.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Examples" t="Include">
+              <e p="CameraController.cs" t="Include" />
+              <e p="PlayerController.cs" t="Include" />
+              <e p="TempCamera.cs" t="Include" />
+            </e>
+            <e p="VeraScripts" t="Include">
+              <e p="BaseClass.cs" t="Include" />
+              <e p="BaseUnit.cs" t="Include" />
+              <e p="CharacterCombatButtonBehavior.cs" t="Include" />
+              <e p="CombatMoves.cs" t="Include" />
+              <e p="EnemyManager.cs" t="Include" />
+              <e p="EnemyMoveBehavior.cs" t="Include" />
+              <e p="PlayerData.cs" t="Include" />
+              <e p="PlayerUnit.cs" t="Include" />
+              <e p="PlayerUnitManager.cs" t="Include" />
+            </e>
+          </e>
           <e p="Prototype" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="LocationManager.cs" t="Include" />
