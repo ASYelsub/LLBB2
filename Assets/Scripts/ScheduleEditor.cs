@@ -30,7 +30,7 @@ public class ScheduleEditor : Editor
                     t.myTime = (Year.Time)EditorGUILayout.EnumFlagsField(t.myTime);
                     t.myLocation = (LocationManager.location)EditorGUILayout.EnumFlagsField(t.myLocation);
                     t.myClass = (Schedule.Class)EditorGUILayout.EnumFlagsField(t.myClass);
-
+                    t.isStoryTime = EditorGUILayout.Toggle(t.isStoryTime);
                     GUILayout.EndHorizontal();
                     GUILayout.Space(2f);
                 }

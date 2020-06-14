@@ -22,7 +22,7 @@ public class LocationManager : MonoBehaviour
         BoxingRing = 15, PostOffice = 16, Diner = 17,
         ExtraTerrestrial = 18, Dormitory = 19, WateredMelon = 20,
         TheQuad = 21, TheTrainer = 22, Chapel = 23, ChemicalBasement = 24, 
-        woodedPath, oldLibrary, superMarket
+        woodedPath, oldLibrary, superMarket, shopInPit, clothesStore, Hospital, movieTheater
     }
 
     void Start()

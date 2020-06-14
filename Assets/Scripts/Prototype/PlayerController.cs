@@ -55,22 +55,27 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && !textManager.isActive)
             {
                 textManager.label.SetActive(false);
-                if (c.weeklies[Year.currentWeek - 1].seen)
+                if (c.weeklyDIalogue[Year.currentWeek - 1].seen)
                 {
-                    textManager.EnableTextBox(c.weeklies[Year.currentWeek - 1].shorterDialogue);
+                    textManager.EnableTextBox(c.weeklyDIalogue[Year.currentWeek - 1].normalDialogue);
                 }
                 else
                 {
-                    if (c.weeklies[Year.currentWeek - 1].isSpecial)
+                    if (c.schedule.GetTimeSlot().isStoryTime)
                     {
                         c.closenessToPlayer++;
                         if (c.closenessToPlayer > 5)
                         {
                             c.closenessToPlayer = 5;
                         }
+                        textManager.EnableTextBox(c.weeklyDIalogue[Year.currentWeek - 1].specialDialogue);
                     }
-                    textManager.EnableTextBox(c.weeklies[Year.currentWeek - 1].dialogue);
-                    c.weeklies[Year.currentWeek - 1].seen = true;
+                    else
+                    {
+                        textManager.EnableTextBox(c.weeklyDIalogue[Year.currentWeek - 1].normalDialogue);
+                    }
+                 
+                    c.weeklyDIalogue[Year.currentWeek - 1].seen = true;
                 }
                
             }
