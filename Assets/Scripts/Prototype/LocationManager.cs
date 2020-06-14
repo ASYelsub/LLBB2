@@ -21,7 +21,8 @@ public class LocationManager : MonoBehaviour
         RadioTower = 12, River = 13, SecretGarden = 14,
         BoxingRing = 15, PostOffice = 16, Diner = 17,
         ExtraTerrestrial = 18, Dormitory = 19, WateredMelon = 20,
-        TheQuad = 21, TheTrainer = 22, Chapel = 23, ChemicalBasement = 24
+        TheQuad = 21, TheTrainer = 22, Chapel = 23, ChemicalBasement = 24, 
+        woodedPath, oldLibrary, superMarket
     }
 
     void Start()
