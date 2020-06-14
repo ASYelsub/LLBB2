@@ -8,10 +8,21 @@ public class Character : ScriptableObject
 
     public string _name;
 
-    //STATS - should probably be a class T-T
-    public int whamitude, popularity, schoolSpirit, 
-        creepiness, skinThickness, independence, 
-        empathy, strut, health, stamina;
+    [System.Serializable]
+    public class Stats
+    {
+        public enum Stat
+        {
+            whamitude, popularity, schoolSpirit,
+            creepiness, skinThickness, independence,
+            empathy, strut, health, stamina
+        };
+
+        public Stat stat;
+        public int _amt;
+    }
+
+    public Stats[] myStats;
 
     public int closenessToPlayer;
 
@@ -63,4 +74,22 @@ public class Character : ScriptableObject
         public bool seen; // did we see this converstaion already?
     }
 
+    public void ChangeStats(Stats.Stat s, int amt)
+    {
+        FindStat(s)._amt += amt;
+    }
+
+
+    public Stats FindStat(Stats.Stat s)
+    {
+        foreach(Stats stat in myStats)
+        {
+            if(stat.stat == s)
+            {
+                return stat;
+            }
+        }
+        Debug.LogError("Couldn't find matching stat");
+        return null;
+    }
 }

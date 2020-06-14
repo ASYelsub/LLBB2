@@ -7,6 +7,7 @@ public class WearableItem : ScriptableObject // basically clothes, hats etc. tha
 {
 
     public string _name;
+    public Character.Stats[] affectedStats;
     // needs a stat here tbh
    public WearableItem()
     {
