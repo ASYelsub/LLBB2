@@ -76,6 +76,7 @@ public class Schedule : ScriptableObject
     [System.Serializable]
     public class DayInSchedule
     {
+        public bool isStoryDay;
         public Year.Day myDay;
         public TimeSlot[] timeSlots = new TimeSlot[4];
     }

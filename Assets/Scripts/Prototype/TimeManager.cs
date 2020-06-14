@@ -15,11 +15,11 @@ public class TimeManager : MonoBehaviour
     
     void Awake() //these setters will be erased and probably put on the gameManager.
     {
-        Year.currentMonth = (Year.WhichMonth)7; //starts in August
+        Year.currentMonth = (Year.WhichMonth)8; //starts in August
         Year.currentDay = 0; //starts on a monday
         Year.currentTime = 0; //starts in the morning
-        Year.dayInMonth = 26;
-        Year.currentWeek = 1;
+        Year.dayInMonth = 30;
+        Year.currentWeek = 5;
         UpdateText();
       
     }
