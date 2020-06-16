@@ -67,6 +67,7 @@ public class Schedule : ScriptableObject
     [System.Serializable]
     public class TimeSlot
     {
+        public bool isStoryTime; // special character dialogue can show up
         public Year.Time myTime;
         public LocationManager.location myLocation;
         public Class myClass;
