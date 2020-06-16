@@ -12,6 +12,13 @@ public class SkillTree : ScriptableObject
     [System.Serializable]
     public class Skill
     {
+        // character specific
+        public Character specificCharacter; // if this isn't null, this skil is only for a specific character
+        public int expNeeded; // exp needed to be unlocked
+        public enum Study { };
+        public Study study; // which study does this skill belong too?
+        // skilltype
+
         public Skill root, leftSkill, rightTree;
         public bool isLocked = true;
 
