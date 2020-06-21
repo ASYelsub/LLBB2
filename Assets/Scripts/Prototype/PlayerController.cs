@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private Transform playerTransform;
     private Vector3 playerPosition;
     public float playerSpeed;
+    KeyCode currentKey;
     void Start()
     {
         textManager = FindObjectOfType<TextManager>();
@@ -27,18 +28,39 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
+                if(currentKey != KeyCode.D)
+                {
+                    transform.rotation = Quaternion.Euler(0, 90, 0);
+                    currentKey = KeyCode.D;
+                }
                 playerPosition.x += playerSpeed;
+       
             }
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
+                if (currentKey != KeyCode.W)
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                    currentKey = KeyCode.W;
+                }
                 playerPosition.z += playerSpeed;
             }
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
+                if (currentKey != KeyCode.A)
+                {
+                    transform.rotation = Quaternion.Euler(0, -90, 0);
+                    currentKey = KeyCode.A;
+                }
                 playerPosition.x -= playerSpeed;
             }
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
+                if (currentKey != KeyCode.S)
+                {
+                    transform.rotation = Quaternion.Euler(0, -180, 0);
+                    currentKey = KeyCode.S;
+                }
                 playerPosition.z -= playerSpeed;
             }
         }
