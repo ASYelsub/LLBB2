@@ -40,14 +40,8 @@ public static class Year
     public static void GoToNextWeek() // might want to change how this works tbh
     {
         currentDay = 0;
-        if (currentWeek >= 5)
-        {
-            currentWeek = 1;
-        }
-        else
-        {
-            currentWeek++;
-        }
+        currentWeek++;
+
     }
     public static void GoToNextMonth()
     {

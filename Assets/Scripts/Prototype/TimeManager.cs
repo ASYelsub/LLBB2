@@ -19,7 +19,7 @@ public class TimeManager : MonoBehaviour
         Year.currentDay = 0; //starts on a monday
         Year.currentTime = 0; //starts in the morning
         Year.dayInMonth = 30;
-        Year.currentWeek = 5;
+        Year.currentWeek = 1;
         UpdateText();
       
     }
